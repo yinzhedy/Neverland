@@ -5,11 +5,11 @@ const Header = () => {
     return (
         <div>
             <title>
-                Header
+                Neverland - Foreverland
             </title>
-            <p>
-                This is where the header goes
-            </p>
+            <header>
+                Neverland - Foreverland
+            </header>
         </div>
     )
 };

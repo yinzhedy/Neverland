@@ -51,13 +51,15 @@ function App() {
     <ApolloProvider client={client}>
           <Header />
           <BrowserRouter>
-          <nav>
-        <ul>
+          <nav id= "navbar">
+            <div id= "nav-list-container">
+        <ul id="navlist">
         <li><Link to="/homepage">Homepage</Link></li>
           <li><Link to="/kingdom-schedule">Kingdom Schedule</Link></li>
           <li><Link to="/kingdom-tracker">Kingdom Tracker</Link></li>
           <li><Link to="/member-tracker">Member Tracker</Link></li>
         </ul>
+        </div>
       </nav>
           <div className="container">
             <Routes>
