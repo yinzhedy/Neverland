@@ -2,10 +2,7 @@ import React from 'react';
 
 export function TodaysDate() {
     var today = Date().toLocaleString();
-    console.log(today)
-  return (
-      <p>{today}</p>
-  );
+  return today;
   };
 
 function nextDate(dayIndex) {
@@ -25,6 +22,16 @@ export function NextSaturday() {
     return saturdayDate;
 }
 
+export function NinePmInLocalTime() {
+    var OneAmUTC = new Date(new Date().setUTCHours(1,0,0,0));
+    var NinePmLocal = OneAmUTC.toLocaleTimeString();
+    return NinePmLocal;
+}
 
+export function ElevenPmInLocalTime() {
+    var ThreeAmUTC = new Date(new Date().setUTCHours(3,0,0,0));
+    var ElevenPmLocal = ThreeAmUTC.toLocaleTimeString();
+    return ElevenPmLocal;
+}
 
 

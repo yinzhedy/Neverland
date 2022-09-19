@@ -12,6 +12,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 // below: imports kimgdom schedule, tracker, and member tracker pages
 import KingdomSchedulePage from './pages/kingdom-schedule';
+import KingdomCalendarPage from './pages/kingdom-calendar'
 import KingdomTrackerPage from './pages/kingdom-tracker';
 import MemberTrackerPage from './pages/member-tracker';
 import Homepage from './pages/homepage';
@@ -54,10 +55,11 @@ function App() {
           <nav id= "navbar">
             <div id= "nav-list-container">
         <ul id="navlist">
-        <li><Link to="/homepage">Homepage</Link></li>
+          <li><Link to="/homepage">Homepage</Link></li>
           <li><Link to="/kingdom-schedule">Kingdom Schedule</Link></li>
           <li><Link to="/kingdom-tracker">Kingdom Tracker</Link></li>
           <li><Link to="/member-tracker">Member Tracker</Link></li>
+          <li><Link to="/kingdom-calendar">Kingdom Calendar</Link></li>
         </ul>
         </div>
       </nav>
@@ -67,6 +69,7 @@ function App() {
               <Route path="/kingdom-schedule" element={<KingdomSchedulePage/>}/>
               <Route path="/kingdom-tracker" element={<KingdomTrackerPage/>}/>
               <Route path="/member-tracker" element={<MemberTrackerPage/>}/>
+              <Route path="/kingdom-calendar" element={<KingdomCalendarPage/>}/>
             </Routes>
           </div>
           </BrowserRouter>
