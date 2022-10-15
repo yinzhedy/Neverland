@@ -7,10 +7,17 @@ const typeDefs = gql`
     email: String
     password: String
   }
-
+  
   type Auth {
     token: ID!
     user: User
+  }
+
+  type Event {
+    title: String
+    startDateTime: Date
+    endDateTime: Date
+    description: String
   }
 
   type Query {

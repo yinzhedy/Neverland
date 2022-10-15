@@ -23,3 +23,17 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_EVENT = gql`
+  mutation addEvent($title: String!, $startDateTime: Date!, $endDateTime: Date! $description: String!) {
+    addEvent(title: $title, startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description) {
+      token
+      event {
+        title
+        startDateTime
+        endDateTime
+        description
+      }
+    }
+  }
+`;

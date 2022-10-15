@@ -23,6 +23,7 @@ import Signup from './pages/signup';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
+import EventForm from './components/Form/addEventForm'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -53,6 +54,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
           <Header />
+          <EventForm></EventForm>
           <BrowserRouter>
           <nav id= "navbar">
             <div id= "nav-list-container">

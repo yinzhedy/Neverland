@@ -20,3 +20,14 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_EVENT = gql`
+  query event($title: String!) {
+    event(title: $title) {
+      title
+      startDateTime
+      endDateTime
+      description
+    }
+  }
+`;
