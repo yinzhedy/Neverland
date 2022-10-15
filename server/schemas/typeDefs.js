@@ -15,8 +15,8 @@ const typeDefs = gql`
 
   type Event {
     title: String
-    startDateTime: Date
-    endDateTime: Date
+    startDateTime: String
+    endDateTime: String
     description: String
   }
 
