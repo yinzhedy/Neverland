@@ -34,5 +34,17 @@ const API = {
   
       return json;
     },
+    async addEvent(data) {
+  
+      const res = await fetch("/api/events/", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+  
+      const json = await res.json();
+  
+      return json;
+    },
   };
   
