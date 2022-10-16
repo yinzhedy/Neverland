@@ -31,10 +31,8 @@ const EventForm = () => {
           const { data } = await addEvent({
             variables: { ...formState },
           });
-
-          data.addEvent;
     
-        } catch (e) {
+        } catch (e) {git
           console.error(e);
         }
       };
