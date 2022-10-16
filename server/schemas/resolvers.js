@@ -40,7 +40,7 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
-      if (!event) {
+      if (!user) {
         throw new AuthenticationError('No event found');
       }
 
