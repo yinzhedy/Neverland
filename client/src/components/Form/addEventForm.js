@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_EVENT } from '../../utils/mutations';
 
+import Auth from '../utils/auth';
+
 const EventForm = () => {
       const [formState, setFormState] = useState({
         title: '',
@@ -30,10 +32,11 @@ const EventForm = () => {
 
     
         try {
-          addEvent({
+          const { data } = await addEvent({
             variables: { ...formState },
           });
-          console.log("tried");
+
+          Auth.login(data.addEvent.token);
     
         } catch (e) {
           console.error(e);
