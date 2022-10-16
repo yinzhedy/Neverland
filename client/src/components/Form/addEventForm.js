@@ -15,11 +15,12 @@ const EventForm = () => {
       const [addEvent, { error, data }] = useMutation(ADD_EVENT);
   
       const handleChange = (event) => {
-        const { title, value } = event.target;
+        const { name, value } = event.target;
+        console.log(name)
     
         setFormState({
           ...formState,
-          [title]: value,
+          [name]: value,
         });
       };
     
