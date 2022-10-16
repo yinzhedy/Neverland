@@ -32,7 +32,7 @@ const EventForm = () => {
             variables: { ...formState },
           });
     
-        } catch (e) {git
+        } catch (e) {
           console.error(e);
         }
       };
