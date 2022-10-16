@@ -15,11 +15,11 @@ const EventForm = () => {
       const [addEvent, { error, data }] = useMutation(ADD_EVENT);
   
       const handleChange = (event) => {
-        const { name, value } = event.target;
+        const { title, value } = event.target;
     
         setFormState({
           ...formState,
-          [name]: value,
+          [title]: value,
         });
       };
     
@@ -31,6 +31,8 @@ const EventForm = () => {
           const { data } = await addEvent({
             variables: { ...formState },
           });
+
+          data.addEvent;
     
         } catch (e) {
           console.error(e);
