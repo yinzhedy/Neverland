@@ -39,12 +39,6 @@ const EventForm = () => {
   
       return (
         <div>
-          {data ? (
-            <p>
-              Success! You may now head{" "}
-              <Link to="/member-tracker-page">back to the homepage.</Link>
-            </p>
-          ) : (
             <form id="addEventForm" onSubmit={handleSubmit}>
               <label>
                 Event Title
@@ -92,7 +86,6 @@ const EventForm = () => {
                 value="Save/Create Event"
               />
             </form>
-          )}
 
           {error && (
             <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
