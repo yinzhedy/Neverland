@@ -27,11 +27,13 @@ const EventForm = () => {
       const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(formState);
+
     
         try {
-          const { data } = await addEvent({
+          addEvent({
             variables: { ...formState },
           });
+          console.log("tried");
     
         } catch (e) {
           console.error(e);
