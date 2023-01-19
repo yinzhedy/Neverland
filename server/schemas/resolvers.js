@@ -29,7 +29,8 @@ const resolvers = {
 
     addEvent: async ( {title, startDateTime, endDateTime, description}) => {
       const event = await Event.create({ title, startDateTime, endDateTime, description});
-      return { event };
+      const token = signToken(event);
+      return { token, event };
     },
 
     addUser: async (parent, { username, email, password }) => {
